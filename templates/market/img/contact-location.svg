@@ -1,0 +1,24 @@
+<svg width="47" height="47" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas__map-contact-location" transform="translate(-12093 850)">
+<g id="Group__map-contact-location">
+<g id="Group2__map-contact-location">
+<g id="Ellipse__map-contact-location">
+<use xlink:href="#path0__map-contact-location" transform="translate(12093 -850)"/>
+</g>
+<g id="location-pin__map-contact-location">
+<g id="Group3__map-contact-location">
+<g id="Group4__map-contact-location">
+<g id="Vector__map-contact-location">
+<use xlink:href="#path1__map-contact-location" transform="translate(12107 -840)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0__map-contact-location" d="M 47 23.5C 47 36.4787 36.4787 47 23.5 47C 10.5213 47 0 36.4787 0 23.5C 0 10.5213 10.5213 0 23.5 0C 36.4787 0 47 10.5213 47 23.5Z"/>
+<path id="path1__map-contact-location" d="M 9.5 0C 4.24414 0 3.49532e-08 4.3595 3.49532e-08 9.75822C 3.49532e-08 11.6406 0.585398 13.438 1.39987 14.915L 7.59109 25.9216C 7.97924 26.6405 8.76189 27 9.5 27C 10.2382 27 10.9826 26.6405 11.4089 25.9216L 17.6001 14.9216C 18.421 13.4444 19 11.6797 19 9.76462C 19 4.36603 14.7559 0 9.5 0ZM 9.5 12.6406C 7.59109 12.6406 6.03215 11.0393 6.03215 9.07847C 6.03215 7.11768 7.59109 5.51637 9.5 5.51637C 11.4089 5.51637 12.9679 7.11768 12.9679 9.07847C 12.9679 11.0458 11.4089 12.6406 9.5 12.6406Z"/>
+</defs>
+</svg>

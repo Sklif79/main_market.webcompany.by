@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="/assets/templates/market/css/style-compile.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6">
+
+    <g id="Canvas" transform="translate(-11222 833)">
+        <g id="left-arrow">
+            <g id="id__flexMenuArrow">
+                <g id="Vector1">
+                    <use xlink:href="#arrow0_fill" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 11222.3 -827.292)"/>
+                </g>
+                <g id="Vector2">
+                    <use xlink:href="#arrow1_fill" transform="matrix(-1.83697e-16 -1 1 -1.83697e-16 11222 -827)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="arrow0_fill"
+              d="M 4.83228 6.91402e-09L 5.41593 0.569518L 1.16752 4.71524L 5.41593 8.86096L 4.83228 9.43048L -4.5663e-08 4.71524L 4.83228 6.91402e-09Z"/>
+        <path id="arrow1_fill"
+              d="M 5.12452 10L -3.77901e-08 5L 5.12431 0L 5.99979 0.854277L 1.75138 5L 6 9.14572L 5.12452 10ZM 0.583861 5L 5.12452 9.43048L 5.41635 9.14572L 1.16772 5L 5.41614 0.854277L 5.12431 0.569518L 0.583861 5Z"/>
+    </defs>
+</svg>

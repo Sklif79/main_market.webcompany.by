@@ -1,0 +1,26 @@
+<svg width="47" height="47" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas__map-contact-phone" transform="translate(-11929 850)">
+<g id="Group__map-contact-phone">
+<g id="Group2__map-contact-phone">
+<g id="Ellipse__map-contact-phone">
+<use xlink:href="#path0__map-contact-phone" transform="translate(11929 -850)"/>
+</g>
+<g id="call-answer__map-contact-phone">
+<g id="Group3__map-contact-phone">
+<g id="Group4__map-contact-phone">
+<g id="Group5__map-contact-phone">
+<g id="Vector__map-contact-phone">
+<use xlink:href="#path1__map-contact-phone" transform="matrix(0.258819 0.965926 -0.965926 0.258819 11961.7 -841.815)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0__map-contact-phone" d="M 47 23.5C 47 36.4787 36.4787 47 23.5 47C 10.5213 47 0 36.4787 0 23.5C 0 10.5213 10.5213 0 23.5 0C 36.4787 0 47 10.5213 47 23.5Z"/>
+<path id="path1__map-contact-phone" d="M 23.8338 19.2401L 20.0686 15.4745C 19.3187 14.7276 18.0767 14.7503 17.3007 15.5266L 15.4038 17.4231C 15.2839 17.3571 15.1599 17.2881 15.0294 17.2149C 13.8316 16.5511 12.1921 15.6414 10.4668 13.9149C 8.7365 12.1848 7.82594 10.5428 7.16018 9.34412C 7.08992 9.21714 7.02261 9.0947 6.95614 8.97843L 8.22924 7.70722L 8.85515 7.08054C 9.63242 6.30306 9.65385 5.06148 8.90565 4.31237L 5.14049 0.546365C 4.39228 -0.201695 3.14979 -0.179001 2.37252 0.598477L 1.31137 1.66572L 1.34037 1.69451C 0.98455 2.14853 0.687217 2.67217 0.465951 3.23686C 0.261985 3.77437 0.134997 4.28729 0.0769316 4.80127C -0.420234 8.92289 1.46322 12.6897 6.57469 17.8013C 13.6403 24.8664 19.3342 24.3326 19.5799 24.3066C 20.1149 24.2426 20.6276 24.1148 21.1486 23.9125C 21.7084 23.6938 22.2317 23.3969 22.6854 23.0418L 22.7086 23.0624L 23.7836 22.0097C 24.5593 21.2324 24.5816 19.9904 23.8338 19.2401Z"/>
+</defs>
+</svg>

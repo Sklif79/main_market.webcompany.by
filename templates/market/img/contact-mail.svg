@@ -1,0 +1,28 @@
+<svg width="47" height="47" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas__map-contact-mail" transform="translate(-12011 850)">
+<g id="Group__map-contact-mail">
+<g id="Group2__map-contact-mail">
+<g id="Ellipse__map-contact-mail">
+<use xlink:href="#path0__map-contact-mail" transform="translate(12011 -850)"/>
+</g>
+<g id="message-envelope__map-contact-mail">
+<g id="Group3__map-contact-mail">
+<g id="Group4__map-contact-mail">
+<g id="Vector__map-contact-mail">
+<use xlink:href="#path1__map-contact-mail" transform="translate(12023 -835)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2__map-contact-mail" transform="translate(12023 -832.393)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0__map-contact-mail" d="M 47 23.5C 47 36.4787 36.4787 47 23.5 47C 10.5213 47 0 36.4787 0 23.5C 0 10.5213 10.5213 0 23.5 0C 36.4787 0 47 10.5213 47 23.5Z"/>
+<path id="path1__map-contact-mail" d="M 0 1.37124e-07L 0 0.849307L 11.5 9.93093L 23 0.849307L 23 1.37124e-07L 0 1.37124e-07Z"/>
+<path id="path2__map-contact-mail" d="M 11.5 9.13382L 4.72631 3.73228L 0 -4.57081e-08L 0 14.3931L 23 14.3931L 23 -4.57081e-08L 18.2737 3.73228L 11.5 9.13382Z"/>
+</defs>
+</svg>

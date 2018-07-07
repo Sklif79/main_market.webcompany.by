@@ -1,0 +1,18 @@
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>phone-call-button</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-39785 380)">
+<g id="phone-call-button">
+<g id="Group">
+<g id="call">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(39785 -380)" fill="#CFCFCF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 3.2 6.93333C 4.44444 9.42222 6.57778 11.4667 9.06667 12.8L 11.0222 10.8444C 11.2889 10.5778 11.6444 10.4889 11.9111 10.6667C 12.8889 11.0222 13.9555 11.2 15.1111 11.2C 15.6444 11.2 16 11.5556 16 12.0889L 16 15.1111C 16 15.6444 15.6444 16 15.1111 16C 6.75556 16 0 9.24444 0 0.888889C 0 0.355556 0.355556 0 0.888889 0L 4 0C 4.53333 0 4.88889 0.355556 4.88889 0.888889C 4.88889 1.95556 5.06667 3.02222 5.42222 4.08889C 5.51111 4.35556 5.42222 4.71111 5.24444 4.97778L 3.2 6.93333Z"/>
+</defs>
+</svg>

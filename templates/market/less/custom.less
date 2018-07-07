@@ -1,0 +1,57 @@
+#toup {
+  color: @primary-color;
+
+  color: lighten(@primary-color, 10%);
+  color: lighten(@primary-color, 15%);
+  color: lighten(@primary-color, 30%);
+
+  color: fade(@primary-color, 30%);
+  color: fade(@primary-color, 40%);
+  color: fade(@primary-color, 75%);
+  color: fade(@primary-color, 80%);
+
+  color: darken(@primary-color, 5%);
+  color: darken(@primary-color, 10%);
+  color: darken(@primary-color, 15%);
+
+  color: desaturate(@primary-color, 20%);
+
+  color: @primary-btn;
+  color: darken(@primary-btn, 15%);
+
+  color: @substrate-background;
+}
+
+.catalog-main.nobackground {
+  background: none;
+}
+
+/*Custom by Rising13. Update date: 28.06.2018, time: 10:20*/
+.catalog-list__order-btn {
+  background-color: @primary-btn;
+  color: #fff;
+  transition: 0.2s;
+  border: none;
+}
+
+.catalog-list__order-btn:hover {
+  background: darken(@primary-btn, 15%);
+  color: #fff;
+}
+
+.in-basket-btn {
+  cursor: pointer;
+}
+
+.in-basket-btn > a {
+  color: #fff;
+}
+
+.in-basket-btn > a:hover {
+  color: #fff;
+}
+
+.in-basket-btn:hover {
+  background: darken(#19C978, 15%);
+}
+
