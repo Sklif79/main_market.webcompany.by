@@ -117,24 +117,36 @@ description:Index
 					</div>				
 				</div>
 			</div>
-			<div class="dignity">
+
+			<!--@- Вывод блока "Специальное предложение" -@-->
+			<div class="special-offer-slider dignity">
 				[[visible_chunk?
 				&id_param_val=`99`
 				&chunk_name=`sale_index`
 				&tv_visible_name=`sale_index_visible`
 				&session_param_name=`sale_index_visible`
 				]]
+			</div>
+
+			<div class="certificates-customers-slider dignity">
 				<div class="container">
 					<div class="certificates">
 						<div class="main-title">
 							<h2>Сертификаты и клиенты</h2>
 						</div>
-						[[visible_chunk? 
+						[[visible_chunk?
 						&id_param_val=`99`
-						&chunk_name=`certificates_index` 
-						&tv_visible_name=`certificates_index_visible` 
+						&chunk_name=`certificates_index`
+						&tv_visible_name=`certificates_index_visible`
 						&session_param_name=`certificates_index_visible`
 						]]
+					</div>
+				</div>
+			</div>
+
+			<div class="partners-slider dignity">
+				<div class="container">
+					<div class="certificates">
 						[[visible_chunk? 
 						&id_param_val=`99`
 						&chunk_name=`company-logo_index` 
