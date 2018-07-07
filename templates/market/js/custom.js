@@ -739,7 +739,7 @@ $(document).ready(function () {
         }, 5000)
 
 
-        $('.card-reviews-el').setMaxHeights();
+        $('.card-reviews-el').setMinHeights();
         $('.news-element .text').setMaxHeights();
     }
 
@@ -1443,6 +1443,19 @@ $.fn.setMaxHeights = function () {
 
     return this.height(Math.max.apply(this, maxHeight));
 };
+
+
+$.fn.setMinHeights = function () {
+    var maxHeight = this.map(function (i, e) {
+        return $(e).height();
+    }).get();
+
+    this.css({'min-height': Math.max.apply(this, maxHeight) + 'px'});
+
+    return this;
+};
+
+
 
 //Промотать до верха по клику на логотип скролменю на главной
 $(document).on('click', '.logo_scroll_toup', function () {
