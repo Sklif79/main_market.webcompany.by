@@ -727,7 +727,7 @@ $(document).ready(function () {
     //слайдер отзывов
     if ($(document).width() <= 769) {
 
-        setTimeout(function () {
+        window.onload = function () {
             $('.card-reviews-wrap').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -735,11 +735,9 @@ $(document).ready(function () {
                 arrows: false,
                 dots: false,
                 centerPadding: '20px'
-            });
-        }, 5000)
+            }).find('.card-reviews-el').setMinHeights();
+        };
 
-
-        $('.card-reviews-el').setMinHeights();
         $('.news-element .text').setMaxHeights();
     }
 
