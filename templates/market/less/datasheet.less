@@ -73,26 +73,27 @@
 }
 
 @media all and (max-width:480px) {
+.contacts-details .card-description__table {
+  display: block;
 
-  .card-description__table {
+  tr {
+    border-bottom: 1px solid #f2f2f2;
     display: block;
+    width: 100%;
+  }
 
-    tr {
-      border-bottom: 1px solid #f2f2f2;
-      display: block;
-      width: 100%;
+  td {
+    border-bottom: none;
+    display: block;
+    width: 100%!important;
+
+    &:first-of-type {
+      color: #6d6262;
     }
+  }
 
-    td {
-      border-bottom: none;
-      display: block;
-      width: 100%!important;
-      
-      &:first-of-type {
-        color: #6d6262;
-      }
-    }
-
+}
+  .card-description__table {
     .card-description__table-wrap.hidden {
       max-height: 365px;
     }
