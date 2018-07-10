@@ -114,6 +114,7 @@
   max-width: 586px;
   border-radius: 10px;
   border: none;
+  margin: 10px;
 }
 .uk-modal-close {
   color: #fff;
@@ -127,10 +128,21 @@
   right: -36px;
   top: 0;
   position: absolute;
+
+  @media (max-width: 768px) {
+    right: -4px;
+    top: -24px;
+    background-size: 15px 15px;
+  }
 }
+
 .uk-modal-close:hover {
   text-decoration: none;
   background: url("../img/modal-close.svg") 50% 50% no-repeat transparent;
+
+  @media (max-width: 768px) {
+    background-size: 15px 15px;
+  }
 }
 
 .uk-open {
