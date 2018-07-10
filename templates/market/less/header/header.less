@@ -659,6 +659,17 @@
         font-size: 13px;
         color: #333;
       }
+
+      .nav-arrow::after {
+        content: '';
+        background: url(../img/sprite/nav-arrow-right.png) 50% 50% no-repeat;
+        width: 5px;
+        height: 9px;
+        top: 11px;
+        right: 15px;
+        display: inline-block;
+        position: absolute;
+      }
     }
 
     .flexMenu-popup {
@@ -983,7 +994,7 @@
       .flexMenu-popup {
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
         ul {
-          left: 237px;
+          left: 100%;
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
         }
       }
