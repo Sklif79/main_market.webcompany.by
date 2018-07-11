@@ -118,7 +118,8 @@ $(document).ready(function () {
     customSettingsInit();
     colorPickerInit();
     // checkboxDragNDrop();
-
+    // calculateCatalogElHeight();
+    catalogElements();
     setTimeout(function () {
         scrollMenu();
     }, 1200);
@@ -142,7 +143,8 @@ $(window).resize(function () {
     calcWindowWidth();
     setHeightMainSliderMobile();
     closeSideBasketOnMobile();
-
+    calculateCatalogElHeight();
+    catalogElements();
     setTimeout(function () {
         scrollMenu();
     }, 1200);
@@ -287,20 +289,6 @@ $(document).ready(function () {
     }
 
     availabilityColor();
-
-    /*определение высоты элемента каталога*/
-    var elCard = $('.outside-product:first').children();
-
-    //верхний и нижний отступы + border
-    var sumHeight = 0;
-
-    elCard.each(function (i, item) {
-        sumHeight += item.clientHeight;
-    });
-
-    sumHeight += "px";
-
-    $('.preview-product-element').css({"height": sumHeight});
 
     /*стрелки в меню + активный верхний пункт*/
     $('ul.menu-sub').parent('li').addClass('nav-arrow');
@@ -2841,3 +2829,60 @@ $(document).ready(function () {
     };
     $('input[name="phone"]').inputmasks(maskOpts);
 });
+
+//высота элементов каталога
+function calculateCatalogElHeight () {
+    if (calcWindowWidth() > 1200) {
+        /*определение высоты элемента каталога*/
+        var elCard = $('.outside-product:first').children();
+
+        //верхний и нижний отступы + border
+        var sumHeight = 0;
+
+        elCard.each(function (i, item) {
+            sumHeight += item.clientHeight;
+        });
+
+        sumHeight -= 66 + "px";
+
+        $('.preview-product-element').css({"height": sumHeight});
+    } else {
+        $('.preview-product-element').css({"height": ""});
+    }
+}
+
+function catalogElements() {
+    var $els = document.querySelectorAll('.catalog-plitka .element'),
+        i;
+
+    for (i = 0; i < $els.length; i++) {
+        if (
+            calcWindowWidth() > 1200
+            && $els[i].querySelectorAll('.outside-product .order-block .count-form').length
+        ) {
+            console.log(i);
+            $els[i].querySelector('.buy-block').appendChild($els[i].querySelector('.count-form'));
+        } else if (
+            calcWindowWidth() > 1200
+            && $els[i].querySelectorAll('.outside-product .order-block .in-basket-btn').length
+        ) {
+            $els[i].querySelector('.buy-block').appendChild($els[i].querySelector('.in-basket-btn'));
+        } else if (
+            calcWindowWidth() <= 1200
+            && document.querySelectorAll('.outside-product .buy-block .count-form').length
+            && !$els[i].querySelectorAll('.order').length
+            && !$els[i].querySelectorAll('.in-basket').length
+        ) {
+            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.count-form'));
+
+        } else if (
+            calcWindowWidth() <= 1200
+            && document.querySelectorAll('.buy-block.in-basket').length
+            && !$els[i].querySelectorAll('.order').length
+        ) {
+            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.in-basket-btn'));
+        }
+    }
+
+    calculateCatalogElHeight ();
+}

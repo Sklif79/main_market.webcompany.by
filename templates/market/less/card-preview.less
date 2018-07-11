@@ -24,6 +24,7 @@
 .product-label-sale() {
   background-color: #c218a0;
 }
+
 /* - / - */
 
 .outside-product {
@@ -35,6 +36,16 @@
   border-radius: 4px;
   padding: 8px 0 0;
   display: block;
+
+  .card-icons {
+    left: 13px;
+    z-index: 9;
+
+    @media (max-width: 1200px) {
+      top: 20px;
+      left: 15px;
+    }
+  }
 
   > .price {
     display: -webkit-box;
@@ -67,8 +78,10 @@
     -webkit-align-items: baseline;
     align-items: baseline;
     padding-right: 0;
-    margin-top: 11px;
     line-height: normal;
+    @media (min-width: 1200px) {
+      margin-top: 11px;
+    }
 
     p {
       margin-right: 9px;
@@ -257,7 +270,7 @@
       position: absolute;
       text-align: center;
 
-      .new, .hit,.sale {
+      .new, .hit, .sale {
         .product-label;
       }
 
@@ -298,7 +311,7 @@
   border: none;
   font-family: inherit;
   @media all and (max-width: 1200px) {
-    min-height: 362px;
+    min-height: 0;
   }
 
   &:hover {
@@ -524,7 +537,7 @@
   position: absolute;
   text-align: center;
 
-  .new, .hit,.sale {
+  .new, .hit, .sale {
     .product-label;
   }
 
@@ -563,13 +576,15 @@
 
   &:hover {
     .outside-product {
-      z-index: 10;
-      position: absolute;
       width: 100%;
-      -webkit-box-shadow: 0 0 20px -8px #000;
-      box-shadow: 0 0 20px -8px #000;
-      height: auto;
       border-bottom: none;
+      @media (min-width: 1200px) {
+        z-index: 10;
+        position: absolute;
+        height: auto;
+        -webkit-box-shadow: 0 0 20px -8px #000;
+        box-shadow: 0 0 20px -8px #000;
+      }
 
       .tag {
         white-space: normal;
@@ -584,11 +599,13 @@
       display: block;
     }
 
-    .buy-block {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
+    @media (min-width: 1200px) {
+      .buy-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
     }
   }
 }
@@ -784,8 +801,46 @@
     display: block;
   }
 
+  .catalog-plitka {
+    .buy-block {
+      display: none;
+    }
+
+    .order-block {
+      margin-top: 14px;
+      margin-bottom: 13px;
+
+      .count-block {
+        display: none;
+      }
+
+      .in-basket-btn {
+        display: block;
+      }
+
+      .in-basket-btn, .order-btn, .buy-btn {
+        width: 132px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: none;
+      }
+
+      .count-form {
+        width: auto;
+      }
+    }
+  }
+
   .preview-product + * {
     margin-top: -67px;
+  }
+
+  .preview-product-element:hover .outside-product {
+    border: 1px solid #f2f2f2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 100%;
   }
 }
 
@@ -809,10 +864,10 @@
     display: none;
   }
 
-  .catalog-plitka .order-block {
-    width: 49%;
-    display: inline-block;
-  }
+  //.catalog-plitka .order-block {
+  //  width: 49%;
+  //  display: inline-block;
+  //}
 
   .outside-product .price {
     white-space: nowrap;
@@ -823,9 +878,9 @@
     display: none;
   }
 
-  .order .outside-product .price {
-    margin-top: 11px;
-  }
+  //.order .outside-product .price {
+  //  margin-top: 11px;
+  //}
 
   .catalog-plitka .order .order-block {
     width: 100%;
@@ -835,20 +890,13 @@
     display: flex;
   }
 
-  .preview-product-element {
-    min-height: 331px;
-  }
+  //.preview-product-element {
+  //  min-height: 331px;
+  //}
 
   .preview-product-slider .preview-product-element:hover .buy-block,
   .preview-product-slider .preview-product-element:hover .more-block {
     display: none;
-  }
-
-  .preview-product-element:hover .outside-product {
-    border: 1px solid #f2f2f2;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    height: 100%;
   }
 
   .catalog-plitka .order-btn {
@@ -856,9 +904,9 @@
     margin-top: 11px;
   }
 
-  .preview-product-element.order .order-btn {
-    width: 47%;
-  }
+  //.preview-product-element.order .order-btn {
+  //  width: 47%;
+  //}
 
   .catalog-list .availability {
     display: none;
@@ -1068,7 +1116,7 @@
   }
 
   .more-buy .preview-product-element:hover .outside-product,
-  .preview-product .more-buy  .outside-product {
+  .preview-product .more-buy .outside-product {
     border-radius: 0;
     border: none;
   }
