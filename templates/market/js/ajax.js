@@ -205,6 +205,8 @@ $(document).ready(function () {
                         }
 
                         inProgress = false;
+
+                        catalogElements();
                     }
                 });
             }
@@ -264,6 +266,7 @@ $(document).ready(function () {
                         }
 
                         inProgress = false;
+                        catalogElements();
                     }
                 });
             }

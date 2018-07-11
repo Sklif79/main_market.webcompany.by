@@ -2846,8 +2846,14 @@ function calculateCatalogElHeight () {
         sumHeight -= 66 + "px";
 
         $('.preview-product-element').css({"height": sumHeight});
+
+        $('.catalog-spisok .title, .catalog-spisok .price').css({"height": ""});
     } else {
         $('.preview-product-element').css({"height": ""});
+
+        $('.catalog-spisok .title, .catalog-spisok .price').css({"height": ""});
+        $('.catalog-spisok .title').setMaxHeights();
+        $('.catalog-spisok .price').setMaxHeights();
     }
 }
 

@@ -93,22 +93,22 @@ h1 + .sorting-catalog-view {
 
       &.active:hover::before {
         @media (min-width: 1071px) {
-          color: #fff!important;
+          color: #fff !important;
         }
       }
-      
+
       &:hover {
         color: @primary-color;
 
         &::before {
-          color: fade(@primary-color, 75%)!important;
+          color: fade(@primary-color, 75%) !important;
         }
 
         .rate-mobile__title {
           color: @primary-color;
         }
       }
-      
+
       @media (max-width: 1070px) {
         padding: 0 19px 0 0;
         margin-left: 0;
@@ -162,7 +162,7 @@ h1 + .sorting-catalog-view {
     a.active {
       background: @primary-color;
       color: #fff;
-      
+
       &:hover {
         //background-color: darken(@primary-color, 15%);
 
@@ -170,7 +170,7 @@ h1 + .sorting-catalog-view {
           color: inherit;
         }
       }
-      
+
       @media screen and (max-width: 1070px) {
         background-color: transparent;
         color: @primary-color;
@@ -274,9 +274,6 @@ h1 + .sorting-catalog-view {
 
 /*catalog-spisok*/
 .catalog-spisok {
-  .availability {
-    margin-top: 19px;
-  }
 
   .title {
     a {
@@ -284,7 +281,7 @@ h1 + .sorting-catalog-view {
       font-size: 16px;
       color: @primary-color;
       text-decoration: none;
-      
+
       &:hover {
         color: #333;
       }
@@ -508,8 +505,104 @@ h1 + .sorting-catalog-view {
       }
     }
   }
-}
 
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .catalog-spisok-info {
+      padding-bottom: 0;
+    }
+
+    .element {
+      flex-direction: column;
+      flex-basis: 50%;
+      align-items: center;
+      position: relative;
+      border-radius: 0;
+      border-left: none;
+      padding: 0 10px 19px;
+
+      &.order .buy-btn {
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+
+      .buy-block {
+        padding: 0;
+        margin-top: 5px;
+      }
+
+      &:hover {
+        box-shadow: none!important;
+      }
+
+
+      &:nth-of-type(even) {
+        border-right: none;
+      }
+
+      &:nth-of-type(odd) {
+
+      }
+
+      .price {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+
+        > p {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .catalog-spisok-info {
+      padding-top: 0;
+      flex: 0 0 auto;
+    }
+
+    .product-icons {
+      top: 15px;
+    }
+
+    .title {
+      text-align: center;
+
+      a {
+        font-size: 11px;
+      }
+    }
+
+    .catalog-spisok-article-cat-wrap, .text, .availability-wrap, .count-block {
+      display: none;
+    }
+
+    .card-icons {
+      top: 15px;
+      left: 10px;
+    }
+
+    .catalog-spisok-info {
+      padding-right: 0;
+    }
+
+    .catalog-spisok-buy {
+      background: none;
+      border-top: none;
+      width: 100%;
+
+      .buy-btn {
+        width: 100%;
+      }
+    }
+
+    .catalog-spisok-img {
+      position: static;
+      margin: 15px 10px 10px;
+    }
+  }
+}
 
 .catalog-list {
   .element {
@@ -552,8 +645,6 @@ h1 + .sorting-catalog-view {
       -webkit-flex: none;
       flex: none;
     }
-
-
 
     .product-img {
       text-align: center;
@@ -616,6 +707,7 @@ h1 + .sorting-catalog-view {
         > div {
           padding: 0;
         }
+
         .availability {
           -webkit-justify-content: center;
           -ms-flex-pack: center;
@@ -623,6 +715,7 @@ h1 + .sorting-catalog-view {
           justify-content: center;
           margin-top: 10px;
         }
+
         .article, .link-category {
           text-align: center;
         }
@@ -675,7 +768,6 @@ h1 + .sorting-catalog-view {
         text-decoration: none;
       }
 
-
       @media (max-width: 960px) {
         .content {
           margin: 10px 0;
@@ -707,7 +799,6 @@ h1 + .sorting-catalog-view {
       align-items: flex-start;
       width: 135px;
       padding-right: 5px;
-
 
       > p {
         margin: 0;
@@ -806,14 +897,14 @@ h1 + .sorting-catalog-view {
   }
 }
 
-.catalog-list, .catalog-spisok  {
+.catalog-list, .catalog-spisok {
   .count__form-btn, .count__form-el {
     height: 24px;
     width: 30px;
   }
 }
 
-.catalog-list , .catalog-spisok {
+.catalog-list, .catalog-spisok {
   .count-block {
     height: 26px;
   }
@@ -923,6 +1014,12 @@ h1 + .sorting-catalog-view {
   width: 145px;
   margin: 12px 30px 9px 12px;
   position: relative;
+
+  .card-icons {
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
 }
 
 .catalog-spisok-info {
@@ -941,7 +1038,50 @@ h1 + .sorting-catalog-view {
   }
 }
 
-.catalog-spisok-article-cat-wrap  {
+.availability-wrap {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.availability-wrap-icons {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+
+
+}
+
+.availability-wrap__icon {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:last-of-type {
+    border-right: 0;
+  }
+
+  &:hover {
+    span {
+      color: @primary-color;
+    }
+
+    svg {
+      fill: @primary-color;
+    }
+  }
+
+  span {
+    color: #666;
+    padding-left: 4px;
+  }
+
+  svg {
+    fill: #A0A0A0;
+  }
+}
+
+.catalog-spisok-article-cat-wrap {
   margin-top: 5px;
 
   .link-category {
@@ -967,7 +1107,6 @@ h1 + .sorting-catalog-view {
     }
   }
 }
-
 
 .catalog-list, .catalog-spisok {
   .element:hover {
@@ -1021,7 +1160,7 @@ h1 + .sorting-catalog-view {
   }
 
   .in-basket-btn {
-    flex:none;
+    flex: none;
     width: 100%;
   }
 }
