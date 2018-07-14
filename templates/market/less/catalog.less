@@ -45,7 +45,6 @@ h1 + .sorting-catalog-view {
 
   svg {
     fill: #333;
-    //pointer-events: none;
   }
 
   a:hover {
@@ -164,15 +163,13 @@ h1 + .sorting-catalog-view {
       color: #fff;
 
       &:hover {
-        //background-color: darken(@primary-color, 15%);
-
         .rate-mobile__title {
           color: inherit;
         }
       }
 
       @media screen and (max-width: 1070px) {
-        background-color: transparent;
+        background-color: transparent!important;
         color: @primary-color;
       }
     }
@@ -606,14 +603,10 @@ h1 + .sorting-catalog-view {
 
 .catalog-list {
   .element {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    table-layout: fixed;
     padding: 5px 16px 5px 12px;
     margin: 9px 0 0;
     border: 1px solid #f2f2f2;
@@ -626,9 +619,13 @@ h1 + .sorting-catalog-view {
       margin-left: 11px;
       width: 31px;
       height: 31px;
+      flex: none;
       background-image: url("../img/card-basket-btn.png");
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      padding: 0;
+      font-size: 0;
+      font-weight: bold;
     }
 
     .catalog-list__buy-block {
@@ -637,13 +634,6 @@ h1 + .sorting-catalog-view {
       -webkit-flex: none;
       flex: none;
       text-align: right;
-    }
-
-    > *:not(.catalog-list__title-pcrice-wrap) {
-      -webkit-box-flex: 0;
-      -ms-flex: none;
-      -webkit-flex: none;
-      flex: none;
     }
 
     .product-img {
@@ -693,7 +683,9 @@ h1 + .sorting-catalog-view {
     }
 
     .availability {
-      width: 125px;
+      width: 141px;
+      flex: none;
+      white-space: nowrap;
     }
 
     .content {
@@ -798,11 +790,13 @@ h1 + .sorting-catalog-view {
       -webkit-align-items: flex-start;
       align-items: flex-start;
       width: 135px;
+      flex: none;
       padding-right: 5px;
 
       > p {
         margin: 0;
         font-weight: bold;
+        white-space: nowrap;
       }
       .price-wrap {
         > p {
@@ -853,29 +847,55 @@ h1 + .sorting-catalog-view {
   }
 }
 
-.catalog-list__title-pcrice-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.catalog-list__cell-buy {
+  width: 411px;
+}
+
+.catalog-list__row {
+  display: table-row;
+}
+
+.catalog-list__cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
+
+.card-icons-horizontal {
+  width: 89px;
+  padding-left: 25px;
+
+  a:first-of-type {
+    margin-right: 10px;
+  }
+
+  svg {
+    fill: #A0A0A0;
+
+    &:hover {
+      fill: @primary-color;
+    }
+  }
+}
+
+.catalog-list-mobile-wrap {
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  max-width: 530px;
+  align-items: center;
+}
+
+.catalog-list__buy-block {
+  flex: none;
+  width: 134px;
 }
 
 .catalog-list__img {
-  width: 35px;
-  margin-right: 17px;
+  width: 57px;
+  padding-right: 17px;
+  padding-left: 6px;
 }
 
 .catalog-list__title {
-  margin-right: 70px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
 
   a {
     color: #333;
@@ -935,6 +955,9 @@ h1 + .sorting-catalog-view {
   flex: none;
   display: none;
   cursor: pointer;
+  width: 134px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .order {
@@ -1175,7 +1198,7 @@ h1 + .sorting-catalog-view {
   &.in-basket {
     .in-basket-btn {
       display: flex;
-      width: 154px;
+      width: 134px;
     }
 
     .count-form {
@@ -1211,6 +1234,42 @@ h1 + .sorting-catalog-view {
   }
 }
 
+@media (max-width: 1024px) {
+  .catalog-list .count-block {
+    display: none;
+  }
+
+  .catalog-list .element .buy-btn, .catalog-list__order-btn,
+  .catalog-list__buy-block.in-basket .in-basket-btn,
+  .catalog-list__buy-block {
+    width: 92px;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .catalog-list__cell-buy {
+    width: 343px;
+  }
+
+  .catalog-list .element .availability,
+  .catalog-list .element .price {
+    width: 118px;
+  }
+
+  .catalog-list .element .buy-btn {
+    margin-left: 0;
+    background-image: none;
+  }
+
+  .in-basket-btn svg {
+    margin-right: 5px;
+    width: 8px;
+  }
+}
+
 @media (max-width: 768px) {
   .mobile-price-wrap {
     display: -webkit-box;
@@ -1226,18 +1285,6 @@ h1 + .sorting-catalog-view {
 }
 
 @media screen and (max-width: 580px) {
-  .catalog-list .element {
-    padding: 9px 15px 9px 10px;
-  }
-
-  .catalog-list__title-pcrice-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-
   .catalog-list__title a {
     border: none;
     color: @primary-color;
@@ -1257,5 +1304,71 @@ h1 + .sorting-catalog-view {
 
   .catalog-list .element .price > p span {
     font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .catalog-list .element {
+    display: block;
+    padding: 12px 10px 15px;
+  }
+
+  .catalog-list .element .availability {
+    display: none;
+  }
+
+  .catalog-list__img {
+    width: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+  }
+
+  .catalog-list__title, .catalog-list__cell-buy {
+    float: right;
+    width: ~"calc(100% - 72px)";
+  }
+
+  .catalog-list__title {
+    margin-bottom: 12px;
+  }
+
+  .catalog-list__cell {
+    display: block;
+    padding: 0;
+  }
+
+  .catalog-list-mobile-wrap {
+    justify-content: space-between;
+  }
+
+  .catalog-list__row {
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .catalog-list-mobile-wrap {
+    padding: 0;
+  }
+
+  .catalog-list .element .price > p {
+    margin-top: 0;
+    font-size: 11px;
+    line-height: normal;
+  }
+
+  .catalog-list .element .price {
+    font-size: 10px;
+    flex-direction: column-reverse;
+    width: auto;
+  }
+
+  .catalog-list__buy-block {
+    padding: 0;
   }
 }
