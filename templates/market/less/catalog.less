@@ -465,8 +465,8 @@ h1 + .sorting-catalog-view {
       -webkit-box-align: center;
       align-items: center;
       border-top: 1px solid #f3f3f3;
-      margin-top: 15px;
-      padding: 10px 0;
+      margin-top: 0;
+      padding: 0;
       > p {
         margin: 0;
       }
@@ -1025,7 +1025,7 @@ h1 + .sorting-catalog-view {
 
   .buy-block {
     display: block;
-    margin: 12px 0 0;
+    margin: 9px 0 0;
     height: auto;
   }
 
@@ -1104,6 +1104,7 @@ h1 + .sorting-catalog-view {
   padding-left: 20px;
   padding-right: 20px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 12px;
 
   &:last-of-type {
     border-right: 0;
@@ -1232,10 +1233,22 @@ h1 + .sorting-catalog-view {
   }
 }
 
-.card-icons {
-  position: absolute;
+.main-first-image-wrap .card-icons {
   top: 0;
   left: -18px;
+}
+
+@media (max-width: 959px) {
+  .main-first-image-wrap .card-icons {
+    top: 15px;
+    left: 15px;
+  }
+}
+
+.card-icons {
+  position: absolute;
+  top: 25px;
+  left: 20px;
   z-index: 10;
   display: flex;
   flex-direction: column;
