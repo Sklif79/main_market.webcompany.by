@@ -796,6 +796,7 @@ h1 + .sorting-catalog-view {
       width: 135px;
       flex: none;
       padding-right: 5px;
+      font-size: 13px;
 
       > p {
         margin: 0;
@@ -857,6 +858,16 @@ h1 + .sorting-catalog-view {
 
 .catalog-list__row {
   display: table-row;
+
+  .price-old-wrap {
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .price-old-wrap {
+      font-size: 10px;
+    }
+  }
 }
 
 .catalog-list__cell {
@@ -1001,6 +1012,16 @@ h1 + .sorting-catalog-view {
   -webkit-align-items: center;
   align-items: center;
   text-align: center;
+
+  .price_old_rub_val {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .price_old_rub_val {
+      font-size: 11px;
+    }
+  }
 
   .buy-block {
     display: block;
