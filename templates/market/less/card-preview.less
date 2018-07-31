@@ -797,25 +797,33 @@
     white-space: nowrap;
   }
 
-  .catalog-plitka .buy-block {
-    display: block;
-  }
-
   .catalog-plitka {
-    .buy-block {
+    .preview-product-element:hover .buy-block {
+      display: block;
+    }
+
+    .in-basket-btn {
       display: none;
+    }
+
+    .order-block .buy-block {
+      display: block;
+      width: auto;
+      margin: 0;
+      padding: 0;
     }
 
     .order-block {
       margin-top: 14px;
       margin-bottom: 13px;
 
-      .count-block {
-        display: none;
+      .price {
+        flex-direction: column;
+        padding-right: 0;
       }
 
-      .in-basket-btn {
-        display: block;
+      .count-block {
+        display: none;
       }
 
       .in-basket-btn, .order-btn, .buy-btn {

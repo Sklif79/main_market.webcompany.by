@@ -2861,13 +2861,15 @@ function catalogElements() {
     var $els = document.querySelectorAll('.catalog-plitka .element'),
         i;
 
+    // debugger;
+
     for (i = 0; i < $els.length; i++) {
         if (
             calcWindowWidth() > 1200
             && $els[i].querySelectorAll('.outside-product .order-block .count-form').length
         ) {
             console.log(i);
-            $els[i].querySelector('.buy-block').appendChild($els[i].querySelector('.count-form'));
+            $els[i].querySelector('.order-block').after($els[i].querySelector('.buy-block.shk-item'));
         } else if (
             calcWindowWidth() > 1200
             && $els[i].querySelectorAll('.outside-product .order-block .in-basket-btn').length
@@ -2879,14 +2881,14 @@ function catalogElements() {
             && !$els[i].querySelectorAll('.order').length
             && !$els[i].querySelectorAll('.in-basket').length
         ) {
-            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.count-form'));
+            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.buy-block.shk-item'));
 
         } else if (
             calcWindowWidth() <= 1200
             && document.querySelectorAll('.buy-block.in-basket').length
             && !$els[i].querySelectorAll('.order').length
         ) {
-            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.in-basket-btn'));
+            $els[i].querySelector('.order-block').appendChild($els[i].querySelector('.buy-block.shk-item'));
         }
     }
 
