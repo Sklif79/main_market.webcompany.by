@@ -532,8 +532,9 @@ $(document).ready(function () {
                     $(".spinner").hide();
                     var endload = $('#ajax_stop').val();
                     if (endload == 'end') {
-                        $(".more-prod a.primary-button").hide();
+                        $(".more-prod").hide();
                     }
+
                     /*var this_url = window.location.pathname;
                      var url = this_url + delim + get_page;
                      history.pushState(null, null, url);*/
