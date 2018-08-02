@@ -856,6 +856,28 @@ h1 + .sorting-catalog-view {
   width: 411px;
 }
 
+@media (min-width: 1024px) {
+  .no-favourites {
+    .catalog-list__row {
+      .card-icons-horizontal {
+        display: none;
+      }
+
+      .catalog-list__cell-buy {
+        width: 500px;
+      }
+
+      .count-form {
+        justify-content: flex-end;
+      }
+
+      .catalog-list__buy-block {
+        width: 208px;
+      }
+    }
+  }
+}
+
 .catalog-list__row {
   display: table-row;
 
