@@ -529,6 +529,7 @@ $(document).ready(function () {
                     suma = parseInt(st) + parseInt(total);
                     $('#product_site').attr('start', suma);
                     $('#product_cont>div:first-child').append(msg);
+                    catalogElements();
                     $(".spinner").hide();
                     var endload = $('#ajax_stop').val();
                     if (endload == 'end') {

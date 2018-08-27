@@ -2861,8 +2861,6 @@ function catalogElements() {
     var $els = document.querySelectorAll('.catalog-plitka .element'),
         i;
 
-    // debugger;
-
     for (i = 0; i < $els.length; i++) {
         if (
             calcWindowWidth() > 1200
