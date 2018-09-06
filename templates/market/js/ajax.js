@@ -144,6 +144,7 @@ $(document).ready(function () {
                             $(".more-prod a.primary-button").hide();
                         }
 
+                        customCounter();
                         inProgress = false;
                         catalogElements();
                     }
@@ -203,7 +204,7 @@ $(document).ready(function () {
                         if (endload == 'end') {
                             $(".more-prod a.primary-button").hide();
                         }
-
+                        customCounter();
                         inProgress = false;
 
                         catalogElements();
@@ -264,7 +265,7 @@ $(document).ready(function () {
                         if (endload == 'end') {
                             $(".more-prod a.primary-button").hide();
                         }
-
+                        customCounter();
                         inProgress = false;
                         catalogElements();
                     }

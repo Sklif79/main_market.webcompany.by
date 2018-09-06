@@ -2892,3 +2892,19 @@ function catalogElements() {
 
     calculateCatalogElHeight ();
 }
+
+function customCounter() {
+    $('.count__form-btn').on('click', function (e) {
+        $counter = $(this).closest('.count-block').find('.count__form-val');
+
+        if ($(this).data('spin') === "up") {
+            $counter.val(parseInt($counter.val()) + 1);
+        } else {
+            $counter.val(parseInt($counter.val()) - 1);
+
+            if (parseInt($counter.val()) < 1) {
+                $counter.val(1);
+            }
+        }
+    })
+}
